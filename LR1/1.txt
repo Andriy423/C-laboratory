@@ -1,0 +1,17 @@
+#include <iostream>
+#include <cmath>
+using namespace std;
+
+// 16
+int main()
+{
+    
+    float y,a,b;
+    a = 3;
+    b = 0.501;
+    
+    y = cbrt(pow(a-b, 2) * pow(sin(1-a/b), 2) * M_PI/3 * pow(cos(1-b/a), 2) * M_PI/3) / (0.701 * pow(log(a-b), 2));
+        
+    cout<<y;
+    
+}

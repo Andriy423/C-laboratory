@@ -1,0 +1,23 @@
+#include <iostream>
+#include <cmath>
+using namespace std;
+
+
+// Завдання 1
+int main()
+{
+    float x, y;
+    
+    cout << "Enter X: ";
+    cin >> x;
+    
+    if (x < 0){
+        y = pow(M_E, -x)*sin(1/(x+3.2));
+    } else {
+        y = pow(M_E, -x+2);
+    }
+    
+    cout << "Y = "<< y;
+    
+}
+

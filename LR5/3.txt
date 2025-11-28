@@ -1,0 +1,50 @@
+#include <iostream>
+#include <cmath>
+#include <iomanip>
+using namespace std;
+
+int main()
+{
+    double a, b, h, x, y;
+    
+    cout << "a = ";
+    cin >> a;
+    
+    cout << "b = ";
+    cin >> b;
+    
+    cout << "h = ";
+    cin >> h;
+    
+    cout << endl;
+    
+    if (a > b) {
+        cout << "Error: a must be <= b" << endl;
+        return 1;
+    }
+    
+    if (h <= 0) {
+        cout << "Error: h must be > 0" << endl;
+        return 1;
+    }
+    
+    cout << "-------------------" << endl;
+    cout << ":  X  :    Y     :" << endl;
+    cout << "-------------------" << endl;
+    
+    x = a;
+    while (x <= b) {
+        if (x <= 6) {
+            y = 5 * pow(x, 3) + sqrt(-x + 6);
+            cout << ": " << fixed << setprecision(1) << setw(3) << x 
+                 << " : " << setprecision(3) << setw(7) << y << " :" << endl;
+        } else {
+            cout << ": " << fixed << setprecision(1) << setw(3) << x 
+                 << " :  undef  :" << endl;
+        }
+        
+        x += h;
+    }
+    
+    cout << "-------------------" << endl;
+}

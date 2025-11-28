@@ -1,0 +1,23 @@
+#include <iostream>
+#include <cmath>
+using namespace std;
+
+// Завдання 2
+int main()
+{
+    float x, y;
+    
+    cout << "Enter X: ";
+    cin >> x;
+    
+    cout << "Enter Y: ";
+    cin >> y;
+    
+    if (x >= 0 & x <= 3 & y >=0 & y <= 1){
+        cout << "YES, point in the area";
+    } else {
+        cout << "NO, point not in the area";
+    }
+        
+}
+

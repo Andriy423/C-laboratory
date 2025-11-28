@@ -1,0 +1,18 @@
+#include <iostream>
+#include <cmath>
+using namespace std;
+
+
+// 21
+int main()
+{
+    
+    float y,a,b;
+    a = 2;
+    b = 13.17;
+    
+    y = sqrt(pow(M_E, 0.5*log((1-cos(a/b*M_PI))/(1+cos(a/b*M_PI)))) + pow(M_E, 0.3*log((1-sin(b/a*M_PI))/(1+sin(b/a*M_PI)))));
+        
+    cout<<y;
+    
+}
