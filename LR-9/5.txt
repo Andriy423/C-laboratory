@@ -1,0 +1,35 @@
+#include <iostream>
+#include <cstdlib>
+#include <ctime>
+using namespace std;
+
+int main() {
+    srand(time(0));
+
+    const int N = 10;
+    int arr[N];
+
+    cout << "Array: ";
+    for (int i = 0; i < N; i++) {
+        arr[i] = rand() % 100;
+        cout << arr[i] << " ";
+    }
+    cout << endl;
+
+    int max1 = arr[0];
+    int max2 = arr[1];
+    if (max2 > max1) swap(max1, max2);
+
+    for (int i = 2; i < N; i++) {
+        if (arr[i] > max1) {
+            max2 = max1;
+            max1 = arr[i];
+        } else if (arr[i] > max2) {
+            max2 = arr[i];
+        }
+    }
+
+    cout << "Second largest element: " << max2 << endl;
+
+    return 0;
+}

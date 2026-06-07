@@ -1,0 +1,33 @@
+#include <iostream>
+#include <cstdlib>
+#include <ctime>
+using namespace std;
+
+int main() {
+    srand(time(0));
+
+    const int N = 10;
+    int arr[N];
+
+    cout << "Array: ";
+    for (int i = 0; i < N; i++) {
+        arr[i] = rand() % 10 - 5;
+        cout << arr[i] << " ";
+    }
+    cout << endl;
+
+    int index = -1;
+    for (int i = 0; i < N; i++) {
+        if (arr[i] == 0) {
+            index = i;
+            break;
+        }
+    }
+
+    if (index != -1)
+        cout << "First zero element index: " << index << endl;
+    else
+        cout << "No zero elements in array" << endl;
+
+    return 0;
+}

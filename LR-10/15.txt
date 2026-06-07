@@ -1,0 +1,33 @@
+#include <iostream>
+#include <cstdlib>
+#include <ctime>
+using namespace std;
+
+int main() {
+    const int m = 3;
+    const int n = 3;
+    int mas[m][n];
+
+    srand(time(0));
+
+    for (int i = 0; i < m; i++) {
+        for (int j = 0; j < n; j++) {
+            mas[i][j] = rand() % 100;
+            cout << mas[i][j] << " ";
+        }
+        cout << endl;
+    }
+
+    int mainDiagSum = 0;
+    int sideDiagSum = 0;
+
+    for (int i = 0; i < m; i++) {
+        mainDiagSum += mas[i][i];
+        sideDiagSum += mas[i][n - 1 - i];
+    }
+
+    cout << "main diagonal sum = " << mainDiagSum << endl;
+    cout << "side diagonal sum = " << sideDiagSum << endl;
+
+    return 0;
+}
